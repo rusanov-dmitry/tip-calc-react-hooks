@@ -1,0 +1,10 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.container {
+  margin: 3.2rem 1.6rem 3.2rem 3.2rem;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

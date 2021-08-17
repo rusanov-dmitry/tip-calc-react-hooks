@@ -1,0 +1,23 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.container {
+    max-width: 92rem;
+    height: 48rem;
+    background-color: $mainWhite;
+    display: flex;
+    border-radius: 2.4rem;
+    overflow: hidden;
+}
+
+h2 {
+    font-size: $mainTextSize;
+    color: $darkBlueText;
+    margin: 0 0 0.8rem 0;
+}
+
+p {
+    font-size: $helperTextSize;
+    color: $darkBlueFields;
+    margin: 0;
+}

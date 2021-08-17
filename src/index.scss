@@ -1,3 +1,15 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +17,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: $backgroundColor;
+  font-family: "Roboto Mono", sans-serif;
+  height: 100vh;
+  @include flexCenter();
 }
 
 code {
