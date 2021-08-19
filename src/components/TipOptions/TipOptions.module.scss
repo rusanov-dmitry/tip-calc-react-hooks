@@ -10,6 +10,7 @@
     display: grid;
     grid-template: 1fr 1fr / 1fr 1fr 1fr;
     gap: 1.5rem;
+    position: relative;
 
     .button {
       position: relative;
@@ -17,70 +18,38 @@
       height: 4.8rem;
       background-color: $primaryBlue;
       border-radius: 0.8rem;
-      &:hover {
-        background-color: $darkBlueFields;
-      }
-      &:focus-within {
-        background-color: $secondaryGreen;
-        label {
-          color: $primaryBlue;
-        }
+
+      input, label {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        cursor: pointer;
       }
 
-      input {
-        position: absolute;
-        cursor: pointer;
-        opacity: 0;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-      }
       label {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         font-size: $inputTextSize;
         color: $mainWhite;
-        cursor: pointer;
+        text-align: center;
+        padding-top: 0.7rem;
       }
-    }
 
-    .buttonInput {
-      width: 11.6rem;
-      height: 4.8rem;
-      position: relative;
+      input[type="radio"] {
+        opacity: 0.01;
+        z-index: 100;
+      }
 
-      input {
-        width: 100%;
-        height: 100%;
-        border: none;
+      input[type="radio"]:hover+label {
+        background-color: $darkBlueFields;
         border-radius: 0.8rem;
-        padding: 0.8rem 1.6rem;
-        text-align: end;
-        font-size: $inputTextSize;
-        font-weight: 700;
-        font-family: "Roboto Mono", sans-serif;
-        background-color: $lightBlueFields;
-        color: $primaryBlue;
+      }
 
-        &:focus {
-          box-shadow: 0 0 0 0.2rem $darkBlueFields;
-          outline: none;
-        }
-        &::placeholder {
-          color: $darkBlueFields;
-          font-size: $additionalInputTextSize;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }
-        &::-webkit-outer-spin-button,
-        &::-webkit-inner-spin-button {
-          -webkit-appearance: none;
-          margin: 0;
-        }
+      input[type="radio"]:checked+label {
+        background-color: $secondaryGreen;
+        border-radius: 0.8rem;
+        color: $primaryBlue;
       }
     }
   }
