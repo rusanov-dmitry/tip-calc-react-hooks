@@ -11,7 +11,7 @@ const AppContainer = () => {
     });
 
     function handleBillChange(bill) {
-        let parsedBill = parseInt(bill);
+        let parsedBill = parseFloat(bill);
         if (isNaN(parsedBill)) parsedBill = 0;
         setState({...state, bill: parsedBill});
     }
@@ -36,7 +36,7 @@ const AppContainer = () => {
             <AdjustmentSection handleBillChange={handleBillChange}
                                handleTipChange={handleTipChange}
                                handlePeopleChange={handlePeopleChange} />
-            <ResultSection />
+            <ResultSection state={state} />
         </div>
   );
 }

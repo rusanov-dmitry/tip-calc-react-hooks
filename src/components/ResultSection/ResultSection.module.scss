@@ -47,5 +47,13 @@
     border: none;
     border-radius: 0.8rem;
     padding: 1.1rem 0;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $mainWhite;
+    }
+    &:active {
+      background-color: $lightBlueFields;
+    }
   }
 }
