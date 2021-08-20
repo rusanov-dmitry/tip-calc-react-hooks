@@ -7,14 +7,19 @@ const ResultSection = (props) => {
 
     function calculateTipAmountAndTotal() {
         let calculatedTipAmount = props.state.bill / 100 * props.state.tipPercent / props.state.numberOfPeople;
-        setTipAmount(calculatedTipAmount.toFixed(2));
         let calculatedTotal = props.state.bill / props.state.numberOfPeople + calculatedTipAmount;
+        setTipAmount(calculatedTipAmount.toFixed(2));
         setTotal(calculatedTotal.toFixed(2));
     }
 
     useEffect(() => {
         if (props.state.bill !== 0 && props.state.tipPercent !== 0 && props.state.numberOfPeople !== 0) {
             calculateTipAmountAndTotal();
+        } else {
+            let defaultTipAmount = 0;
+            let defaultTotal = 0;
+            setTipAmount(defaultTipAmount.toFixed(2));
+            setTotal(defaultTotal.toFixed(2));
         }
     });
 
@@ -40,7 +45,7 @@ const ResultSection = (props) => {
                     </div>
                 </div>
             </div>
-            <button>RESET</button>
+            <button onClick={props.resetAll}>RESET</button>
         </section>
     );
 }

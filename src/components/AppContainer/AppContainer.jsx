@@ -27,16 +27,25 @@ const AppContainer = () => {
         setState({...state, numberOfPeople: parsedNumOfPeople});
     }
 
+    function resetAll() {
+        setState({
+            bill: 0,
+            tipPercent: 0,
+            numberOfPeople: 0
+        });
+    }
+
     useEffect(() => {
         console.log(state);
     })
 
     return (
         <div className={styles.container}>
-            <AdjustmentSection handleBillChange={handleBillChange}
+            <AdjustmentSection state={state}
+                               handleBillChange={handleBillChange}
                                handleTipChange={handleTipChange}
                                handlePeopleChange={handlePeopleChange} />
-            <ResultSection state={state} />
+            <ResultSection state={state} resetAll={resetAll} />
         </div>
   );
 }

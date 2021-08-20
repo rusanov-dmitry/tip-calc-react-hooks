@@ -3,3 +3,7 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin resetFlexCenter {
+  display: block;
+}

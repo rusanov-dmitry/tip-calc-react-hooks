@@ -1,6 +1,7 @@
 @import "src/styles/variables";
 
 .container {
+  width: 100%;
 
   h2 {
     margin-bottom: 1.8rem;
@@ -12,12 +13,20 @@
     gap: 1.5rem;
     position: relative;
 
+    @media only screen and (max-width: 414px) {
+      grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    }
+
     .button {
       position: relative;
       width: 11.6rem;
       height: 4.8rem;
       background-color: $primaryBlue;
       border-radius: 0.8rem;
+
+      @media only screen and (max-width: 414px) {
+        justify-self: center;
+      }
 
       input, label {
         display: block;

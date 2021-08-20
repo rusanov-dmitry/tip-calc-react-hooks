@@ -8,6 +8,15 @@
     display: flex;
     border-radius: 2.4rem;
     overflow: hidden;
+
+    @media only screen and (max-width: 930px) {
+        display: block;
+        height: auto;
+    }
+
+    @media only screen and (max-width: 414px) {
+        border-radius: 0;
+    }
 }
 
 h2 {

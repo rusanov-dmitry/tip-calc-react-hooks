@@ -6,12 +6,12 @@ import InputBill from '../InputBill/InputBill';
 import TipOptions from '../TipOptions/TipOptions';
 import InputPeople from '../InputPeople/InputPeople';
 
-const AdjustmentSection = ({handleBillChange, handleTipChange, handlePeopleChange}) => {
+const AdjustmentSection = ({state, handleBillChange, handleTipChange, handlePeopleChange}) => {
     return (
       <main className={styles.container}>
-          <InputBill icon={dollarIcon} handleBillChange={handleBillChange} />
+          <InputBill icon={dollarIcon} handleBillChange={handleBillChange} bill={state.bill} />
           <TipOptions handleTipChange={handleTipChange} />
-          <InputPeople icon={humanIcon} handlePeopleChange={handlePeopleChange} />
+          <InputPeople icon={humanIcon} handlePeopleChange={handlePeopleChange} numberOfPeople={state.numberOfPeople} />
       </main>
   );
 }

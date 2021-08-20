@@ -10,6 +10,17 @@
   flex-direction: column;
   justify-content: space-between;
 
+  @media only screen and (max-width: 930px) {
+    height: 40rem;
+    margin: 3.2rem;
+  }
+
+  @media only screen and (max-width: 414px) {
+    width: 100%;
+    margin: 3.2rem 0 0 0;
+    border-radius: 0;
+  }
+
   .results {
 
     .resultPrice {
