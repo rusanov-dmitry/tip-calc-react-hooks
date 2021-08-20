@@ -1,16 +1,17 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styles from './AdjustmentSection.module.scss';
 import dollarIcon from '../../assets/dollar-icon.svg';
 import humanIcon from '../../assets/human-icon.svg';
-import InputField from '../InputField/InputField';
+import InputBill from '../InputBill/InputBill';
 import TipOptions from '../TipOptions/TipOptions';
+import InputPeople from '../InputPeople/InputPeople';
 
-const AdjustmentSection = () => {
-  return (
+const AdjustmentSection = ({handleBillChange, handleTipChange, handlePeopleChange}) => {
+    return (
       <main className={styles.container}>
-          <InputField id="bill" title="Bill" icon={dollarIcon} />
-          <TipOptions />
-          <InputField id="amount" title="Number of People" icon={humanIcon} />
+          <InputBill icon={dollarIcon} handleBillChange={handleBillChange} />
+          <TipOptions handleTipChange={handleTipChange} />
+          <InputPeople icon={humanIcon} handlePeopleChange={handlePeopleChange} />
       </main>
   );
 }
