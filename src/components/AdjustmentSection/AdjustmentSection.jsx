@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import styles from './AdjustmentSection.module.scss';
 import dollarIcon from '../../assets/dollar-icon.svg';
 import humanIcon from '../../assets/human-icon.svg';

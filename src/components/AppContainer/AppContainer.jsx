@@ -35,17 +35,16 @@ const AppContainer = () => {
         });
     }
 
-    useEffect(() => {
-        console.log(state);
-    })
-
     return (
-        <div className={styles.container}>
-            <AdjustmentSection state={state}
-                               handleBillChange={handleBillChange}
-                               handleTipChange={handleTipChange}
-                               handlePeopleChange={handlePeopleChange} />
-            <ResultSection state={state} resetAll={resetAll} />
+        <div>
+            <h1 className={styles.mainTitle}>Tip Calculator</h1>
+            <div className={styles.container}>
+                <AdjustmentSection state={state}
+                                   handleBillChange={handleBillChange}
+                                   handleTipChange={handleTipChange}
+                                   handlePeopleChange={handlePeopleChange} />
+                <ResultSection state={state} resetAll={resetAll} />
+            </div>
         </div>
   );
 }
