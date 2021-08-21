@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import styles from './AppContainer.module.scss';
 import AdjustmentSection from '../AdjustmentSection/AdjustmentSection';
 import ResultSection from '../ResultSection/ResultSection';
+import logo from '../../assets/logo.svg';
 
 const AppContainer = () => {
     const [state, setState] = useState({
@@ -37,7 +38,7 @@ const AppContainer = () => {
 
     return (
         <div>
-            <h1 className={styles.mainTitle}>Tip Calculator</h1>
+            <img src={logo} alt="Logo" className={styles.logo}/>
             <div className={styles.container}>
                 <AdjustmentSection state={state}
                                    handleBillChange={handleBillChange}
