@@ -1,6 +1,6 @@
 # SPLIT /TIPS
 
-> SPLIT /TIPS is a tip calculator app built with React using React Hooks.
+> SPLIT /TIPS is a tip calculator app built with React using React Hooks. You can check it here: https://splittips.netlify.app
 
 ## Table of contents
 
