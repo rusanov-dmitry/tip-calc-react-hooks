@@ -15,10 +15,10 @@ const InputBill = (props) => {
         <section className={styles.container}>
             <h2>Bill</h2>
             <div className={styles.inputContainer}>
-                <input type="number" id="bill" name="bill" placeholder="0" value={bill}
+                <input type="text" pattern="[0-9]" id="bill" name="bill" placeholder="0" value={bill}
                        onChange={event => {props.handleBillChange(event.target.value)}}
                        onKeyDown={blockInvalidChar}/>
-                <img src={props.icon}/>
+                <img src={props.icon} alt="dollar"/>
             </div>
         </section>
     );

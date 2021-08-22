@@ -19,7 +19,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: $backgroundColor;
   font-family: "Roboto Mono", sans-serif;
-  height: 100vh;
   @include flexCenter();
 
   @media only screen and (max-width: 414px) {

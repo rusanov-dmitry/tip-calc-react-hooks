@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState } from 'react';
 import styles from './AppContainer.module.scss';
 import AdjustmentSection from '../AdjustmentSection/AdjustmentSection';
 import ResultSection from '../ResultSection/ResultSection';
@@ -37,7 +37,7 @@ const AppContainer = () => {
     }
 
     return (
-        <div>
+        <div className={styles.appWrapper}>
             <img src={logo} alt="Logo" className={styles.logo}/>
             <div className={styles.container}>
                 <AdjustmentSection state={state}

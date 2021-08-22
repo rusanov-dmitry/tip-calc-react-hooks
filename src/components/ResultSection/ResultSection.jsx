@@ -5,23 +5,19 @@ const ResultSection = (props) => {
     const [tipAmount, setTipAmount] = useState(0);
     const [total, setTotal] = useState(0);
 
-    function calculateTipAmountAndTotal() {
-        let calculatedTipAmount = props.state.bill / 100 * props.state.tipPercent / props.state.numberOfPeople;
-        let calculatedTotal = props.state.bill / props.state.numberOfPeople + calculatedTipAmount;
-        setTipAmount(calculatedTipAmount.toFixed(2));
-        setTotal(calculatedTotal.toFixed(2));
-    }
-
     useEffect(() => {
         if (props.state.bill !== 0 && props.state.tipPercent !== 0 && props.state.numberOfPeople !== 0) {
-            calculateTipAmountAndTotal();
+            let calculatedTipAmount = props.state.bill / 100 * props.state.tipPercent / props.state.numberOfPeople;
+            let calculatedTotal = props.state.bill / props.state.numberOfPeople + calculatedTipAmount;
+            setTipAmount(calculatedTipAmount.toFixed(2));
+            setTotal(calculatedTotal.toFixed(2));
         } else {
             let defaultTipAmount = 0;
             let defaultTotal = 0;
             setTipAmount(defaultTipAmount.toFixed(2));
             setTotal(defaultTotal.toFixed(2));
         }
-    });
+    }, [props.state.bill, props.state.tipPercent, props.state.numberOfPeople]);
 
     return (
         <section className={styles.container}>

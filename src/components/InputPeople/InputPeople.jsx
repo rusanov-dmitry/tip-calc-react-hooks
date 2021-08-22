@@ -15,10 +15,10 @@ const InputPeople = (props) => {
         <section className={styles.container}>
             <h2>Number of People</h2>
             <div className={styles.inputContainer}>
-                <input type="number" id="amount" name="amount" placeholder="0" value={num}
+                <input type="text" pattern="[0-9]" id="amount" name="amount" placeholder="0" value={num}
                        onChange={event => {props.handlePeopleChange(event.target.value)}}
                        onKeyDown={blockInvalidChar} />
-                <img src={props.icon}/>
+                <img src={props.icon} alt="people"/>
             </div>
         </section>
     );

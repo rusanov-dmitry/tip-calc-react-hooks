@@ -4,7 +4,7 @@
 
 ## Table of contents
 
-* [About "SPLIT /TIPS"](#about-project)
+* [About project](#about-project)
 * [Screenshots](#screenshots)
 * [Technologies](#technologies)
 * [Setup](#setup)
